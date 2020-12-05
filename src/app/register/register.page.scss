@@ -1,0 +1,38 @@
+ion-label{
+  opacity: 50%;
+  font-weight: 900;
+}
+
+ion-input{
+  border-bottom: 2px solid #3d4389;
+  --color: white;
+  font-weight: 900;
+}
+
+ion-button{
+  --background: #5059b3;
+    height: 45px;
+    margin-top: 22px;
+    width: 300px;
+    margin-left: 4%;
+}
+
+a{
+  color:#5059b3;
+  font-weight: 800;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 2.5em;
+  color:#5059b3;
+}
+
+p{
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.signin{
+  margin-top: 45px;
+}
