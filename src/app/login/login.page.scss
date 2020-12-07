@@ -1,5 +1,41 @@
+#logo{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+#welcome{
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+ion-input{
+  
+  --color: white;
+  font-weight: 600;
+}
+
+ion-item{
+  border-bottom: 3px solid #383f7f;
+}
+
+ion-label{
+  color: white;
+  opacity: 50%;
+  font-weight: bold;
+}
+
+ion-icon{
+  margin-top: 28px;
+}
+
+a{
+  color: #5058b0;
+    text-decoration: none;
+}
+
 ion-button{
-  height: 50px;
-  --border-radius: 27px;
-  margin-top: 20px;
+  --background: #5058b0;
+    height: 46px;
+    margin-top: 30%;
 }
