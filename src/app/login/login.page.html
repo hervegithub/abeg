@@ -8,11 +8,11 @@
 
   <ion-item class="ion-no-padding" lines="none" color="primary">
     <ion-label position="stacked">Email</ion-label>
-    <ion-input [(ngModel)]="userConnect.email" type="email" placeholder="herveyves3@gmail.com"></ion-input>
+    <ion-input [(ngModel)]="userConnect.email" type="text" placeholder="herveyves3@gmail.com"></ion-input>
   </ion-item>
   <ion-item class="ion-no-padding" lines="none" color="primary">
     <ion-label position="stacked">Password</ion-label>
-    <ion-input [(ngModel)]="userConnect.password" type="Password" placeholder="........"></ion-input>
+    <ion-input [(ngModel)]="userConnect.password" type="text" placeholder="........"></ion-input>
     <ion-icon slot="end" name="eye-outline"></ion-icon>
   </ion-item>
   <div class="ion-text-right ion-padding-top">
@@ -21,4 +21,8 @@
   <ion-button (click)="onSigIn()"  expand="block"  shape="round">
     Sign In
   </ion-button>
+
+  <div style="margin-top: 52px;" class="ion-text-center">
+   <p>You don't have account? <br> <a href="#" target="_blank">Register now</a></p>
+  </div>
 </ion-content>
