@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-icon class="ion-icon-back" (click)="onCloseModal()" name="arrow-back-outline"></ion-icon>
+      <ion-title>New book</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="primary">
+  <ion-item class="ion-no-padding" lines="none" color="primary">
+    <ion-label position="stacked">Titre du livre</ion-label>
+    <ion-input  type="text" placeholder="Le grand robert"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-no-padding" lines="none" color="primary">
+    <ion-label position="stacked">Matière</ion-label>
+    <ion-input  type="text" placeholder="Mathèmatique"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-no-padding" lines="none" color="primary">
+    <ion-label position="stacked">Niveau</ion-label>
+    <ion-input  type="text" placeholder="En toute lettre"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-no-padding" lines="none" color="primary">
+    <ion-label position="stacked">Auteur</ion-label>
+    <ion-input  type="text" placeholder="Example : Hervé Yves"></ion-input>
+  </ion-item>
+  <ion-item class="ion-no-padding" lines="none" color="primary">
+    <ion-label position="stacked">Maison d'édition</ion-label>
+    <ion-input  type="text" placeholder="Exemple: Edition Tamtam"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-no-padding" lines="none" color="primary">
+    <ion-label position="stacked"> Description</ion-label>
+    <ion-textarea placeholder="Donné plus de details sur l'etat du livre"></ion-textarea>
+  </ion-item>
+
+  <div class="photo-group">
+    <div class="photo">
+      <ion-icon style="font-size: 2em" color="light" name="camera-outline"></ion-icon>
+    </div>
+    <div class="photo border-dash">
+
+    </div>
+  </div>
+
+  <ion-button  expand="block"  shape="round">
+    Enregistrer
+  </ion-button>
+</ion-content>
