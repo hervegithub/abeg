@@ -1,0 +1,32 @@
+.image{
+  height: 60%;
+  width: 100%;
+}
+
+.description{
+  bottom: 0;
+  background-color: #1b1e3c;
+  width: 100%;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  padding: 20px;
+  position: absolute;
+  z-index: 999;
+  margin-top: -50px;
+  height: 60%;
+  color: white;
+}
+
+.title{
+  font-weight: 300;
+  font-size: 1.8em;
+}
+
+.desc{
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+ion-row{
+  margin-top: 6%;
+}
