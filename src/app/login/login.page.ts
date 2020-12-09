@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserLogin } from '../model/user.model';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginPage implements OnInit {
   email: string;
   password: string;
   
-  constructor() { 
+  constructor(private router: Router) { 
     this.userConnect = {
       email:"",
       password:"",
@@ -21,7 +22,8 @@ export class LoginPage implements OnInit {
   }
 
   onSigIn(){
-    console.log('email:'+this.userConnect.email+' password:'+this.userConnect.password);
+    this.router.navigate(['home']);
+    //console.log('email:'+this.userConnect.email+' password:'+this.userConnect.password);
   }
 
   ngOnInit() {
