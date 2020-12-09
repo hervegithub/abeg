@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'new-book',
+    loadChildren: () => import('./new-book/new-book.module').then( m => m.NewBookPageModule)
+  },
+  {
+    path: 'single-book',
+    loadChildren: () => import('./single-book/single-book.module').then( m => m.SingleBookPageModule)
   },
 ];
 
