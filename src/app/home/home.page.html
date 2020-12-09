@@ -1,20 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <!-- Searchbar with cancel button never shown -->
+  <ion-searchbar showCancelButton="never" mode="ios"></ion-searchbar>
+  <!-- fab placed to the (vertical) center and end -->
+  <ion-fab (click)="onShowModal()" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-item lines="none" (click)="onSingleBook()">
+    <img slot="start" src="../../assets/book.jpg" alt="" srcset="">
+    <div>
+      <p class="book-title">Sous la cendre le feu</p>
+      <p class="book-info">Niveau</p>
+      <p class="book-info">2500 Fcfa</p>
+      <p class="book-info">
+        <ion-badge color="primary" mode="ios">Litterature</ion-badge> 
+        <ion-badge color="primary" mode="ios">Français</ion-badge> 
+      </p>
+    </div>
+  </ion-item>
+  <ion-item lines="none" class="ion-margin-top">
+    <img slot="start" src="../../assets/book.jpg" alt="" srcset="">
+    <div>
+      <p class="book-title">Sous la cendre le feu</p>
+      <p class="book-info">Niveau</p>
+      <p class="book-info">2500 Fcfa</p>
+      <p class="book-info">
+        <ion-badge color="primary" mode="ios">Litterature</ion-badge> 
+        <ion-badge color="primary" mode="ios">Français</ion-badge> 
+      </p>
+    </div>
+  </ion-item>
 </ion-content>
