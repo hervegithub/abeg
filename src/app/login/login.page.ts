@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserLogin } from '../model/user.model';
@@ -14,7 +15,7 @@ export class LoginPage implements OnInit {
   email: string;
   password: string;
   
-  constructor(private router: Router) { 
+  constructor(private router: Router, private authService:AuthService) { 
     this.userConnect = {
       email:"",
       password:"",
@@ -22,8 +23,11 @@ export class LoginPage implements OnInit {
   }
 
   onSigIn(){
-    this.router.navigate(['home']);
-    //console.log('email:'+this.userConnect.email+' password:'+this.userConnect.password);
+    this.authService.onSignInWithEmailAndPassword(this.userConnect.email, this.userConnect.password)
+    .then((uid:string) =>{
+      this.router.navigate(['home']);
+    }).catch(err => this.authService.showAlert("Une erreur c'est produite"));
+    
   }
 
   ngOnInit() {

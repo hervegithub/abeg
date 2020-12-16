@@ -1,30 +1,32 @@
 <ion-content color="primary" class="ion-padding">
   <div class="ion-padding">
     <h1>Abeg</h1>
-    <p>Sign Up {{email}}</p>
+    <p>Sign Up </p>
   </div>
 
+  <form [formGroup]= "registerForm" (ngSubmit)="onSignUp(registerForm.value)">
 
-  <ion-item lines="none" color="primary">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input [(ngModel)]="email" type="text" placeholder="johndoe@example.com"></ion-input>
-  </ion-item>
-  <ion-item  lines="none" color="primary">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input [(ngModel)]="password" type="password" placeholder="........."></ion-input>
-  </ion-item>
-  <ion-item lines="none" color="primary">
-    <ion-label position="floating">Re-enter password</ion-label>
-    <ion-input [(ngModel)]="otherPassword" type="password" placeholder=".........."></ion-input>
-  </ion-item>
-
+    <ion-item lines="none" color="primary">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName='email' type="text" placeholder="johndoe@example.com"></ion-input>
+    </ion-item>
+    <ion-item  lines="none" color="primary">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="password"  type="password" placeholder="........."></ion-input>
+    </ion-item>
+    <ion-item lines="none" color="primary">
+      <ion-label position="floating">Re-enter password</ion-label>
+      <ion-input formControlName='passwordVerification'  type="password" placeholder=".........."></ion-input>
+    </ion-item>
+    <div class="ion-text-center ion-padding-top">
+      En vous en registrant vous accpetez nos <a href="#"  rel="terms">termes d'utilisation</a> et notre <a  target="_blank" rel="policy">politique de confidentialité</a>  
+    </div>
+    <ion-button type="submit" [disabled]="!registerForm.valid"  expand="block"  shape="round">
+      Sign up
+    </ion-button>
+  </form>
   
-  <div class="ion-text-center ion-padding-top">
-    En vous en registrant vous accpetez nos <a href="#"  rel="terms">termes d'utilisation</a> et notre <a  target="_blank" rel="policy">politique de confidentialité</a>  
-  </div>
-  <ion-button (click)="onSignUp()"  expand="block"  shape="round">
-    Sign up
-  </ion-button>
+  
   <div class="ion-text-center ion-padding-top signin">
     Vous avez déjà un compte ? <a href="#"  rel="terms">Sign in</a> 
   </div>
